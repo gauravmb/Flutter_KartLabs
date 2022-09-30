@@ -1,0 +1,4 @@
+enum ProductContainerType {
+  Wishlist,
+  GiftRegistry,
+}
