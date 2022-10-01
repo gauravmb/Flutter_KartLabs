@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kartlabs/utility/constants.dart';
+import 'package:kartlabs/widgets/product_container_list.dart';
 import '../widgets/appbarwithmenu.dart';
 
 class CartScreen extends StatefulWidget {
@@ -12,9 +14,7 @@ class _CartScreenState extends State<CartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Cart")),
-      body: Center(
-        child: Text("Cart items to come here.."),
-      ),
+      body: ProductContainerList(containerType: ProductContainerType.Cart),
     );
   }
 }

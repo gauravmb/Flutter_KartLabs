@@ -1,4 +1,1 @@
-enum ProductContainerType {
-  Wishlist,
-  GiftRegistry,
-}
+enum ProductContainerType { Wishlist, GiftRegistry, Cart }
