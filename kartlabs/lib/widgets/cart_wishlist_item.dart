@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kartlabs/model_providers/product.dart';
 import 'package:kartlabs/utility/constants.dart';
+import 'package:kartlabs/view_model/cart_view_model.dart';
+import 'package:kartlabs/view_model/wishlist_view_model.dart';
 import 'package:provider/provider.dart';
 
 class CartOrWishlistItem extends StatelessWidget {
@@ -24,6 +26,23 @@ class CartOrWishlistItem extends StatelessWidget {
             product.price,
             style: TextStyle(color: Colors.black.withOpacity(0.6)),
           ),
+          trailing: IconButton(
+              onPressed: () {
+                switch (containerType) {
+                  case ProductContainerType.Wishlist:
+                    Provider.of<Wishlist>(context, listen: false)
+                        .removeProduct(product.name);
+                    break;
+                  case ProductContainerType.GiftRegistry:
+                    // TODO: Handle this case.
+                    break;
+                  case ProductContainerType.Cart:
+                    Provider.of<Cart>(context, listen: false)
+                        .removeProduct(product.name);
+                    break;
+                }
+              },
+              icon: Icon(Icons.delete)),
         )
       ],
     ));

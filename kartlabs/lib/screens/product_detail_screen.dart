@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartlabs/model_providers/cart.dart';
+import 'package:kartlabs/view_model/cart_view_model.dart';
 import 'package:kartlabs/view_model/giftregistry_view_model.dart';
 import 'package:kartlabs/model_providers/product.dart';
 import 'package:kartlabs/view_model/wishlist_view_model.dart';

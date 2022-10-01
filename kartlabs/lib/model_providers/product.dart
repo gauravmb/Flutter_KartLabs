@@ -14,4 +14,23 @@ class Product {
     required this.categoryId,
     required this.images,
   });
+
+  Map toJson() => {
+        'name': name,
+        'price': price,
+        'description': description,
+        'thumbnailUrl': thumbnailUrl,
+        'categoryId': thumbnailUrl,
+      };
+
+  factory Product.fromJson(dynamic value) {
+    return Product(
+      price: value['price'],
+      name: value['name'],
+      description: value['description'],
+      images: [],
+      thumbnailUrl: value['thumbnailUrl'],
+      categoryId: value['categoryId'],
+    );
+  }
 }

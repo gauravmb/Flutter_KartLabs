@@ -26,6 +26,9 @@ class AppBarWithMenu extends AppBar {
                             .pushNamed(GiftRegistryScreen.routeName);
                       }
                       break;
+                    default:
+                      // TODO: Handle this case.
+                      break;
                   }
                 },
                 itemBuilder: (cxt) => const [
