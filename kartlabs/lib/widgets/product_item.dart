@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kartlabs/model_providers/cart.dart';
-import 'package:kartlabs/model_providers/giftregistry.dart';
+import 'package:kartlabs/view_model/giftregistry_view_model.dart';
 import 'package:kartlabs/model_providers/product.dart';
-import 'package:kartlabs/model_providers/wishlist.dart';
+import 'package:kartlabs/view_model/wishlist_view_model.dart';
 import 'package:kartlabs/screens/product_detail_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -32,18 +32,20 @@ class ProductItem extends StatelessWidget {
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  child: Image.network(
-                    product.thumbnailUrl,
-                    height: 250,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
+                  child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Image.network(
+                        product.thumbnailUrl,
+                        height: 200,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      )),
                 ),
                 Positioned(
                   bottom: 20,
-                  right: 10,
+                  left: 0,
                   child: Container(
-                    width: 300,
+                    width: 400,
                     padding: const EdgeInsets.symmetric(
                       vertical: 5,
                       horizontal: 20,
@@ -67,7 +69,7 @@ class ProductItem extends StatelessWidget {
                       Provider.of<Cart>(context, listen: false)
                           .addProduct(product);
                     },
-                    icon: Icon(Icons.shop)),
+                    icon: Icon(Icons.shopping_cart)),
                 IconButton(
                     onPressed: () {
                       Provider.of<Wishlist>(context, listen: false)

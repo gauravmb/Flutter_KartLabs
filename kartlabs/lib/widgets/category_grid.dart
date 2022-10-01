@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kartlabs/model_providers/categories.dart';
+import 'package:kartlabs/view_model/categories_view_model.dart';
 import 'package:kartlabs/widgets/category_item.dart';
 import 'package:provider/provider.dart';
 

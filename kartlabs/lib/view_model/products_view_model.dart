@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './product.dart';
+import '../model_providers/product.dart';
 import 'dart:convert';
 
 class Products with ChangeNotifier {

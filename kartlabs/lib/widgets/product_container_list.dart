@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kartlabs/model_providers/cart.dart';
-import 'package:kartlabs/model_providers/giftregistry.dart';
+import 'package:kartlabs/view_model/giftregistry_view_model.dart';
 import 'package:kartlabs/model_providers/product.dart';
-import 'package:kartlabs/model_providers/wishlist.dart';
+import 'package:kartlabs/view_model/wishlist_view_model.dart';
 import 'package:kartlabs/utility/constants.dart';
 import 'package:kartlabs/widgets/cart_wishlist_item.dart';
 import 'package:kartlabs/widgets/giftregistry_item.dart';

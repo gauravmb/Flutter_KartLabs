@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kartlabs/model_providers/categories.dart';
-import 'package:kartlabs/model_providers/products.dart';
+import 'package:kartlabs/view_model/categories_view_model.dart';
+import 'package:kartlabs/view_model/products_view_model.dart';
 import 'package:kartlabs/screens/products_screen.dart';
 import 'package:kartlabs/widgets/category_grid.dart';
 import '../widgets/appbarwithmenu.dart';

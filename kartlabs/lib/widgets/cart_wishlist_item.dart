@@ -12,7 +12,20 @@ class CartOrWishlistItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(product.name),
-    );
+        child: Column(
+      children: [
+        ListTile(
+          leading: Container(
+              height: double.infinity,
+              width: 100,
+              child: Image.network(product.thumbnailUrl)),
+          title: Text(product.name),
+          subtitle: Text(
+            product.price,
+            style: TextStyle(color: Colors.black.withOpacity(0.6)),
+          ),
+        )
+      ],
+    ));
   }
 }

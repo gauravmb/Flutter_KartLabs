@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kartlabs/model_providers/cart.dart';
-import 'package:kartlabs/model_providers/categories.dart';
-import 'package:kartlabs/model_providers/giftregistry.dart';
-import 'package:kartlabs/model_providers/products.dart';
-import 'package:kartlabs/model_providers/wishlist.dart';
+import 'package:kartlabs/view_model/categories_view_model.dart';
+import 'package:kartlabs/view_model/giftregistry_view_model.dart';
+import 'package:kartlabs/view_model/products_view_model.dart';
+import 'package:kartlabs/view_model/wishlist_view_model.dart';
 import 'package:kartlabs/screens/giftregistry_screen.dart';
 import 'package:kartlabs/screens/product_detail_screen.dart';
 import 'package:provider/provider.dart';

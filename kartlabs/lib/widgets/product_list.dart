@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kartlabs/model_providers/product.dart';
-import 'package:kartlabs/model_providers/products.dart';
+import 'package:kartlabs/view_model/products_view_model.dart';
 import 'package:kartlabs/widgets/product_item.dart';
 import 'package:provider/provider.dart';
 
@@ -34,11 +34,15 @@ class ProductList extends StatelessWidget {
           .toList();
     }
 
-    return ListView.builder(
-      itemCount: filteredProducts.length,
-      padding: const EdgeInsets.all(10),
-      itemBuilder: (context, index) =>
-          ProductItem(product: filteredProducts[index]),
-    );
+    return filteredProducts.length > 0
+        ? ListView.builder(
+            itemCount: filteredProducts.length,
+            padding: const EdgeInsets.all(10),
+            itemBuilder: (context, index) =>
+                ProductItem(product: filteredProducts[index]),
+          )
+        : Center(
+            child: Text("No Product available for the selected search ...!!!"),
+          );
   }
 }
